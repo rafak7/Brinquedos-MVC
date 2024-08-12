@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Brinquedos</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<h1>Lista de Brinquedos</h1>
+<div class="container-link">
+    <a href="/brinquedos/novo">Adicionar Novo Brinquedo</a>
+</div>
+<ul>
+    <li th:each="brinquedo : ${brinquedos}">
+        <h2 th:text="${brinquedo.nome}">Nome do Brinquedo</h2>
+        <p th:text="${brinquedo.descricao}">Descrição do Brinquedo</p>
+    </li>
+</ul>
+</body>
+</html>

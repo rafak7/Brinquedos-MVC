@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Novo Brinquedo</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+</head>
+<body>
+<h1>Novo Brinquedo</h1>
+<form action="#" th:action="@{/brinquedos}" th:object="${brinquedo}" method="post">
+    <div>
+        <label>Nome:</label>
+        <input type="text" th:field="*{nome}" />
+    </div>
+    <div>
+        <label>Descrição:</label>
+        <textarea th:field="*{descricao}"></textarea>
+    </div>
+    <div>
+        <button type="submit">Salvar</button>
+    </div>
+</form>
+</body>
+</html>
